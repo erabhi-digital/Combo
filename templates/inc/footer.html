@@ -1,0 +1,73 @@
+{% load static %}
+
+<footer class="footer" data-testid="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <a class="navbar-brand mb-2" href="{% url 'home' %}">
+            <img
+              src="{% static 'img/logo.png' %}"
+              alt="Xyz Combo Logo ing-fluid"
+              width="100"
+            />
+          </a>
+          <p>
+            Professional file and folder management solution for modern
+            workflows.
+          </p>
+          <div class="social-links">
+            <a href="#" data-testid="social-twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" data-testid="social-facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" data-testid="social-linkedin"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" data-testid="social-github"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <h4>Popular Brands</h4>
+        <ul class="footer-links">
+          <li><a href="/#features">Realme</a></li>
+          <li><a href="/#features">Vivo</a></li>
+          <li><a href="/#features">Samsung</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Useful Links</h4>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/blogs/">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="/help/">Help Center</a></li>
+          <li><a href="/disclaimer/">Disclaimer</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/security/">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FolderFix. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

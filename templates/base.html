@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ================= META ================= -->
+  {% block meta %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="{% block meta_description %}XYZCombo Web Application{% endblock %}">
+  <meta name="author" content="XYZCombo">
+  {% endblock %}
+
+  <!-- ================= TITLE ================= -->
+  <title>{% block title %}XYZCombo{% endblock %}</title>
+
+  <!-- ================= STYLES ================= -->
+  {% include "inc/__style.html" %}
+
+  <!-- Page Specific CSS -->
+  {% block extra_css %}{% endblock %}
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  {% include "inc/nav.html" %}
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="container py-5 mt-5 content-wrapper">
+
+      {% include "partials/toast.html" %}
+
+      {% block content %}{% endblock %}
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  {% include "inc/footer.html" %}
+
+  <!-- ================= SCRIPTS ================= -->
+  {% include "inc/__js.html" %}
+
+  <!-- Page Specific JS -->
+  {% block extra_js %}{% endblock %}
+
+</body>
+</html>

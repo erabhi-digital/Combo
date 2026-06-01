@@ -1,0 +1,76 @@
+<!-- Team Section -->
+<section class="team-section">
+  <div class="container px-0">
+    <div class="section-header text-center">
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="section-description">The people behind FolderFix</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      {% for team in teams %}
+      <div class="col-md-6 col-lg-4">
+        <div class="glass-card text-center p-4">
+          <!-- Profile Image -->
+          {% if team.image and team.image.image %}
+          <img
+            src="{{ team.image.image.url }}"
+            alt="{{ team.name }}"
+            style="
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin: 0 auto 1rem;
+              border: 3px solid var(--primary);
+            "
+          />
+          {% else %}
+          <!-- Default Avatar -->
+          <div
+            style="
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              margin: 0 auto 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: var(--primary);
+              color: #fff;
+              font-size: 2rem;
+              font-weight: bold;
+            "
+          >
+            {{ team.name|slice:":1"|upper }}
+          </div>
+          {% endif %}
+
+          <h4>{{ team.name }}</h4>
+
+          <p style="color: var(--primary); margin-bottom: 0.5rem">
+            {{ team.role }}
+          </p>
+
+          <p style="color: var(--text-secondary); font-size: 0.9rem">
+            {{ team.bio }}
+          </p>
+        </div>
+      </div>
+
+      {% empty %}
+
+      <!-- Empty State -->
+      <div class="col-12 text-center py-5">
+        <div class="glass-card p-5">
+          <h4>Team Coming Soon</h4>
+
+          <p class="text-muted mb-0">
+            We are building a strong team to bring you the best experience.
+          </p>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

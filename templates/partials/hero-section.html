@@ -1,0 +1,51 @@
+<!-- Hero Section -->
+<section class="hero-section glass-card" style="min-height: 70vh">
+  <div class="hero-background"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center hero-content">
+        {% if hero %}
+        <div class="label-badge" data-testid="about-badge">
+          {{ hero.badge_label }}
+        </div>
+
+        <h1 class="hero-title" data-testid="about-title">{{ hero.title }}</h1>
+
+        <p class="hero-description" data-testid="about-description">
+          {{ hero.sub_title }}
+        </p>
+
+        {% else %}
+        <!-- Fallback Content -->
+        <div class="label-badge">Welcome</div>
+
+        <h1 class="hero-title">Build Something Amazing</h1>
+
+        <p class="hero-description">
+          Create, manage, and organize your content with a modern and powerful
+          platform.
+        </p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if hero and hero.page_key.name == "home" %}
+    <div class="hero-stats d-flex justify-content-center flex-wrap gap-4">
+      <div class="stat-item text-center">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+
+      <div class="stat-item text-center">
+        <div class="stat-number">455+</div>
+        <div class="stat-label">Models Availble</div>
+      </div>
+
+      <div class="stat-item text-center">
+        <div class="stat-number">4.9/5</div>
+        <div class="stat-label">User Rating</div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

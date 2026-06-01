@@ -1,0 +1,45 @@
+<!-- Blog Cards -->
+<div class="row">
+  {% for blog in blogs %}
+
+  <div class="col-12 col-md-6 col-lg-4 mb-4 mb-sm-0">
+    <div class="blog-card glass-card h-100">
+      <div class="blog-img">
+        {% if blog.image and blog.image.image %}
+        <img
+          src="{{ blog.image.image.url }}"
+          class="img-fluid w-100 rounded-2 mb-3"
+          alt="{{ blog.title }}"
+        />
+        {% endif %}
+      </div>
+
+      <div class="p-3">
+        <h5 class="fw-bold">{{ blog.title }}</h5>
+
+        <p class="text-gradient small">
+          {{ blog.description|truncatewords:15 }}
+        </p>
+
+        <a href="{% url 'blog_details' blog.slug %}" class="blog-link">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% empty %}
+
+  <!-- Empty State -->
+  <div class="col-12 text-center py-5">
+    <div class="glass-card p-5">
+      <h4>No Blogs Available</h4>
+
+      <p class="text-muted mb-0">
+        We’re currently working on new articles. Please check back soon.
+      </p>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>

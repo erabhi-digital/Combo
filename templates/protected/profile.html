@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="profile-section py-5">
+  <div class="container px-1">
+    <div class="row justify-content-center ">
+      <div class="col-md-6 col-lg-4 col-12">
+
+        <div class="glass-card profile-card text-center">
+
+          <!-- Avatar -->
+          <div class="profile-avatar mx-auto">
+            {{ user.email|slice:":2"|upper }}
+          </div>
+
+          <!-- Membership Status -->
+          <div class="mt-3">
+
+            {% if membership and membership.is_active %}
+              <span class="badge bg-success px-3 py-2">
+                {{ membership.plan_name }} Plan Active
+              </span>
+              <p class="small mt-3">
+                Expires: {{ membership.expiry_date|date:"M d, Y" }}
+              </p>
+            {% else %}
+              <span class="badge bg-danger px-3 py-2">
+                Membership Expired
+              </span>
+              <p class="small mt-3 ">
+                Activate membership to continue access
+              </p>
+            {% endif %}
+
+          </div>
+
+          <!-- Username -->
+          <h4 class="mt-3 text-capitalize fw-semibold">
+            {{ user.username|default:"Guest User" }}
+          </h4>
+
+          <!-- Email -->
+          <p class="profile-email">{{ user.email }}</p>
+
+          <hr class="profile-divider">
+
+          <!-- Actions -->
+          <div class="profile-actions d-grid gap-2">
+
+            {% if not membership or not membership.is_active %}
+              <a href="{% url 'members:create_order' %}" class="btn btn-success">
+                Activate Membership
+              </a>
+            {% endif %}
+
+            <a href="{% url 'password_reset' %}" class="btn btn-gradient">
+              Change Password
+            </a>
+
+            <a href="{% url 'logout' %}" class="btn btn-danger">
+              Logout
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

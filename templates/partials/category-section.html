@@ -1,0 +1,53 @@
+<!-- Features Section -->
+<section class="features-section" id="features" data-testid="features-section">
+  <div class="container px-0">
+    <div class="section-header text-center">
+      <div class="label-badge" data-testid="features-badge">
+        Explore Part By Category
+      </div>
+      <h2 class="section-title" data-testid="features-title">
+        Everything You Need
+      </h2>
+      <p class="section-description" data-testid="features-description">
+        Find universal parts for all mobile brands
+      </p>
+    </div>
+
+    <div class="row g-3">
+      {% for category in categories %}
+      <div class="col-md-3 text-center">
+        <div class="glass-card pb-2" style="padding: 1.5rem">
+          <span
+            class="mb-3 d-flex justify-content-center align-items-center fs-1 fw-bold text-uppercase mx-auto text-gradient glass-card categor-icon"
+            style="width: 80px; height: 80px; border-radius: 50%"
+          >
+            {{ category.name|slice:":1"|upper }}
+          </span>
+
+          <h4 class="mb-4 text-capitalize">{{ category.name }}</h4>
+
+          <a
+            class="label-badge small"
+            href="{% url "category_detail" slug=category.slug %}"
+            data-testid="{{ category.slug }}-link"
+          >
+            Explore List
+          </a>
+        </div>
+      </div>
+
+      {% empty %}
+      <!-- Clean Empty State -->
+      <div class="col-12 text-center py-5">
+        <div class="glass-card p-5">
+          <h4 class="mb-2">No Categories Found</h4>
+
+          <p class="text-muted mb-0">
+            Categories are currently being updated. Please check back soon.
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

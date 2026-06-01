@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+<!-- Page Title -->
+{% block title %}
+Home | XYZCombo
+{% endblock %}
+
+<!-- SEO Meta Description -->
+{% block meta_description %}
+XYZCombo helps you access powerful digital tools, combo resources, and useful content designed to improve productivity and workflow.
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= Hero Section ================= -->
+{% include "partials/hero-section.html" %}
+
+<!-- ================= Combo Section ================= -->
+{% include "partials/combo-section.html" %}
+
+<!-- ================= Categories ================= -->
+{% include "partials/category-section.html" %}
+
+<!-- ================= Why Choose Us ================= -->
+{% include "partials/choose-section.html" %}
+
+<!-- ================= Pricing ================= -->
+{% include "partials/pricing-section.html" %}
+
+<!-- ================= Latest Blogs ================= -->
+{% include "partials/blogs-section.html" %}
+
+{% endblock %}

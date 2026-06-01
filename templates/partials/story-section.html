@@ -1,0 +1,68 @@
+<!-- Story Section -->
+<section class="story-section" style="padding: 4rem 0">
+  <div class="container px-0">
+    <div class="row g-5 align-items-center">
+      <!-- Story Content -->
+      <div class="col-lg-6">
+        <div class="label-badge">OUR STORY</div>
+
+        {% if story %}
+
+        <h2 class="section-title">{{ story.title }}</h2>
+
+        <p
+          style="
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.8;
+          "
+        >
+          {{ story.description }}
+        </p>
+
+        {% else %}
+
+        <!-- Fallback Content -->
+        <h2 class="section-title">Our Journey</h2>
+
+        <p
+          style="
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.8;
+          "
+        >
+          We are building a platform that simplifies access to mobile parts and
+          solutions. Stay connected as we continue to grow and improve.
+        </p>
+
+        {% endif %}
+      </div>
+
+      <!-- Story Image -->
+      <div class="col-lg-6">
+        {% if story and story.image %}
+        <div class="glass-card p-2 overflow-hidden">
+          <img
+            src="{{ story.image.image.url }}"
+            alt="{{ story.title|default:'Our Story' }}"
+            class="img-fluid"
+            style="border-radius: 1rem"
+          />
+        </div>
+
+        {% else %}
+
+        <!-- Fallback Image -->
+        <div class="glass-card p-5 text-center">
+          <h5 class="mb-2">Story Image Coming Soon</h5>
+          <p class="text-muted mb-0">
+            We are preparing visual highlights of our journey.
+          </p>
+        </div>
+
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

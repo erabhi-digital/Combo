@@ -1,0 +1,58 @@
+<!-- Features Section -->
+<section
+  class="features-section pb-1"
+  id="features"
+  data-testid="features-section"
+>
+  <div class="container px-0 pb-0">
+    <div class="section-header text-center">
+      <div class="label-badge" data-testid="features-badge">
+        Explore Combo by Brand
+      </div>
+      <h2 class="section-title" data-testid="features-title">
+        Everything You Need
+      </h2>
+      <p class="section-description" data-testid="features-description">
+        Find universal combos for all mobile brands
+      </p>
+    </div>
+
+    <div class="row g-4">
+      {% for brand in brands %}
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card glass-card pb-3" data-testid="feature-card">
+          <div class="feature-icon fw-bold">
+            {{ brand.name|slice:":1"|upper }}
+          </div>
+
+          <h3>{{ brand.compatible }}</h3>
+
+          <p class="mb-4 small">
+            Explore {{ brand }} combo parts organized by mobile models to easily
+            find the perfect replacement for your device.
+          </p>
+
+          <a
+            href="{% url "combo_detail" slug=brand.slug %}"
+            class="label-badge"
+            data-testid="feature-link"
+          >
+            {{brand.name}} Combo List
+          </a>
+        </div>
+      </div>
+
+      {% empty %}
+      <!-- Empty State -->
+      <div class="col-12 text-center py-5">
+        <div class="empty-state">
+          <h4>No Brands Available</h4>
+          <p class="text-muted">
+            We are currently updating our brand list. Please check back soon.
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

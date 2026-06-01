@@ -1,0 +1,28 @@
+<!-- Toast Container -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+  {% if error %}
+  <div class="custom-toast error-toast shadow-sm">
+    <div class="d-flex align-items-center">
+      <div class="toast-content">{{ error }}</div>
+      <button
+        class="toast-close"
+        onclick="this.parentElement.parentElement.remove()"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  {% endif %} {% if success %}
+  <div class="custom-toast success-toast shadow-sm">
+    <div class="d-flex align-items-center">
+      <div class="toast-content">{{ success }}</div>
+      <button
+        class="toast-close"
+        onclick="this.parentElement.parentElement.remove()"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+  {% endif %}
+</div>

@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block content %}
+<div class="row justify-content-center py-5">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="pricing-card glass-card text-center p-5 position-relative">
+      <div class="featured-badge">MEMBERSHIP</div>
+
+      <h2 class="fw-bold mb-3">Membership Plan</h2>
+
+      <div class="price mb-3">
+        <span class="amount">₹{{ price }}</span>
+        <span class="period">/ Month</span>
+      </div>
+
+      <p class="pricing-desc mb-4">Access premium features</p>
+
+      <button id="pay-btn" class="btn btn-gradient px-5 py-3">Pay Now</button>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function showToast(message, type = "success") {
+      const container = document.getElementById("toastContainer");
+
+      const toast = document.createElement("div");
+
+      toast.className =
+        type === "success"
+          ? "custom-toast success-toast shadow-sm"
+          : "custom-toast error-toast shadow-sm";
+
+      toast.innerHTML = `
+            <div class="d-flex align-items-center">
+                <div class="toast-content">${message}</div>
+                <button class="toast-close">×</button>
+            </div>
+        `;
+
+      toast.querySelector(".toast-close").onclick = function () {
+        toast.remove();
+      };
+
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.remove();
+      }, 4000);
+    }
+
+    var options = {
+      key: "{{ razorpay_key }}",
+      amount: "{{ amount }}",
+      currency: "INR",
+      name: "Membership",
+      description: "30 Days Plan",
+      order_id: "{{ order_id }}",
+
+      handler: function (response) {
+        fetch("{% url 'members:verify_payment' %}", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: JSON.stringify(response),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status === "success") {
+              showToast("Payment successful! Membership activated.", "success");
+
+              setTimeout(() => {
+                window.location.href = "/protected/profile/";
+              }, 1500);
+            } else {
+              showToast("Payment verification failed.", "error");
+            }
+          })
+          .catch(() => {
+            showToast("Something went wrong.", "error");
+          });
+      },
+
+      theme: {
+        color: "#6366f1",
+      },
+    };
+
+    var rzp = new Razorpay(options);
+
+    document.getElementById("pay-btn").onclick = function (e) {
+      rzp.open();
+      e.preventDefault();
+    };
+  });
+</script>
+
+{% endblock %}

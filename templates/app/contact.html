@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+<!-- Page Title -->
+{% block title %}
+Contact Us | XYZCombo
+{% endblock %}
+
+<!-- SEO Meta Description -->
+{% block meta_description %}
+Get in touch with XYZCombo. Contact our team for support, inquiries, collaborations, or business opportunities.
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= Hero Section ================= -->
+{% include "partials/hero-section.html" with title="Contact Us" subtitle="We’d love to hear from you" %}
+
+<!-- ================= Contact Section ================= -->
+{% include "partials/contact-section.html" %}
+
+{% endblock %}

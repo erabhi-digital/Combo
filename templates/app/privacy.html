@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+<!-- Page Title -->
+{% block title %}
+Privacy Policy | XYZCombo
+{% endblock %}
+
+<!-- SEO Meta Description -->
+{% block meta_description %}
+Read the Privacy Policy of XYZCombo to understand how we collect, use, and protect your personal information.
+{% endblock %}
+
+{% block content %}
+
+<section class="legal-page py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <header class="text-center mb-5">
+      <span class="label-badge">LEGAL</span>
+
+      <h1 class="section-title">Privacy Policy</h1>
+
+      <p class="section-description">
+        Last updated:
+        <time datetime="{{ today|date:'Y-m-d' }}">
+          {{ today|date:"F d, Y" }}
+        </time>
+      </p>
+    </header>
+
+    <!-- Policy Content -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+
+        <article class="glass-card p-4 p-md-5">
+
+          {% for policy in policies %}
+          <section class="policy-section mb-4">
+
+            <h5 class="fw-semibold">
+              {{ policy.title }}
+            </h5>
+
+            <div class="policy-content">
+              {{ policy.description|safe }}
+            </div>
+
+          </section>
+          {% empty %}
+          <p class="text-center">
+            No privacy policy available.
+          </p>
+          {% endfor %}
+
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

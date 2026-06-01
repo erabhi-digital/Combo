@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="py-5">
+        <div class="auth-card glass-card">
+            
+            <div class="auth-header">
+                <h1>Verify OTP</h1>
+                <p>Enter the OTP sent to your email</p>
+            </div>
+
+            <!-- OTP Form -->
+            <form method="POST">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label class="form-label">Enter OTP</label>
+                    <input type="text" name="otp" class="form-control text-center" maxlength="6" placeholder="••••••" required>
+                </div>
+
+                <button type="submit" class="btn btn-gradient w-100 mb-3">
+                    <i class="fas fa-check-circle me-2"></i>
+                    Verify OTP
+                </button>
+            </form>
+
+            <!-- Timer -->
+            <div class="text-center mb-3">
+                <p>Resend OTP in <span id="timer">300</span> seconds</p>
+            </div>
+
+            <!-- Resend Form -->
+            <form method="POST" action="{% url 'resend_otp' %}">
+                {% csrf_token %}
+                <button id="resendBtn" class="btn btn-warning w-100" disabled>
+                    Resend OTP
+                </button>
+            </form>
+
+        </div>
+    </section>
+</div>
+
+
+{% endblock %}

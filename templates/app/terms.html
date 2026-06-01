@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+<!-- Page Title -->
+{% block title %} Terms & Conditions | XYZCombo {% endblock %}
+
+<!-- SEO Meta Description -->
+{% block meta_description %} Read the Terms and Conditions of XYZCombo to
+understand the rules, responsibilities, and policies governing the use of our
+platform. {% endblock %} {% block content %}
+
+<section class="legal-page py-5">
+  <div class="container">
+    <!-- Header -->
+    <header class="text-center mb-5">
+      <span class="label-badge">LEGAL</span>
+
+      <h1 class="section-title">Terms & Conditions</h1>
+
+      <p class="section-description">
+        Last updated:
+        <time datetime="{{ today|date:'Y-m-d' }}">
+          {{ today|date:"F d, Y" }}
+        </time>
+      </p>
+    </header>
+
+    <!-- Terms Content -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <article class="glass-card p-4 p-md-5">
+          {% for term in terms %}
+          <section class="terms-section mb-4">
+            <h5 class="fw-semibold">{{ term.title }}</h5>
+
+            <div class="terms-content">{{ term.description|safe }}</div>
+          </section>
+          {% empty %}
+          <p class="text-center">No terms & conditions available.</p>
+          {% endfor %}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
