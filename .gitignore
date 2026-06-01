@@ -1,0 +1,66 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Django stuff
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Environment variables
+.env
+.env.*
+
+# Static files (if generated)
+staticfiles/
+
+# Migrations (optional - usually keep them)
+# */migrations/
+# !*/migrations/__init__.py
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+
+# Build/distribution
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# PyInstaller
+*.spec
+
+# Cache
+.cache/
+
+# Secrets
+*.pem
+*.key
+*.crt
+
+# Local settings
+local_settings.py
