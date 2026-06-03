@@ -196,52 +196,54 @@ RAZORPAY_WEBHOOK_SECRET = os.getenv("RAZORPAY_WEBHOOK_SECRET")
 # SECURITY (PRODUCTION ONLY)
 # =====================================================
 
-# if DEBUG:
-#     # Development
+if DEBUG:
+    # Development
 
-#     CSRF_TRUSTED_ORIGINS = []
+    CSRF_TRUSTED_ORIGINS = []
 
-#     SECURE_SSL_REDIRECT = False
+    SECURE_SSL_REDIRECT = False
 
-#     SESSION_COOKIE_SECURE = False
-#     CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
 
-#     SECURE_CONTENT_TYPE_NOSNIFF = False
+    SECURE_CONTENT_TYPE_NOSNIFF = False
 
-#     SECURE_HSTS_SECONDS = 0
-#     SECURE_HSTS_INCLUDE_SUBDOMAINS = False
-#     SECURE_HSTS_PRELOAD = False
+    SECURE_HSTS_SECONDS = 0
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+    SECURE_HSTS_PRELOAD = False
 
-# else:
-#     # Production
+else:
+    # Production
 
-#     CSRF_TRUSTED_ORIGINS = [
-#         origin.strip()
-#         for origin in os.getenv(
-#             "CSRF_TRUSTED_ORIGINS", ""
-#         ).split(",")
-#         if origin.strip()
-#     ]
+    CSRF_TRUSTED_ORIGINS = [
+        origin.strip()
+        for origin in os.getenv(
+            "CSRF_TRUSTED_ORIGINS", ""
+        ).split(",")
+        if origin.strip()
+    ]
 
-#     SECURE_SSL_REDIRECT = True
+    SECURE_SSL_REDIRECT = True
 
-#     SESSION_COOKIE_SECURE = True
-#     CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
-#     SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
 
-#     X_FRAME_OPTIONS = "DENY"
+    X_FRAME_OPTIONS = "DENY"
 
-#     SECURE_HSTS_SECONDS = 31536000
-#     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#     SECURE_HSTS_PRELOAD = True
+    SECURE_HSTS_SECONDS = 31536000
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
 
-#     SECURE_REFERRER_POLICY = "same-origin"
+    SECURE_REFERRER_POLICY = "same-origin"
 
-#     SECURE_PROXY_SSL_HEADER = (
-#         "HTTP_X_FORWARDED_PROTO",
-#         "https",
-#     )
+    SECURE_PROXY_SSL_HEADER = (
+        "HTTP_X_FORWARDED_PROTO",
+        "https",
+    )
+    
+    
 
 # =====================================================
 # LOGGING
