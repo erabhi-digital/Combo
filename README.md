@@ -570,3 +570,270 @@ If you have questions regarding this Disclaimer, please contact:
 **[Company Name]**
 Email: [[support@yourdomain.com](mailto:support@yourdomain.com)]
 Website: [https://yourdomain.com]
+
+---
+
+# Refund & Cancellation Policy
+
+**Last Updated:** June 12, 2026
+
+At **[Website Name]**, we strive to provide high-quality services and a seamless user experience. This Refund & Cancellation Policy explains how subscription cancellations and refund requests are handled.
+
+## 1. Subscription Cancellation
+
+Users may cancel their subscription at any time through their account settings.
+
+Upon cancellation:
+
+* Access to premium features will continue until the current billing period ends.
+* No additional charges will be made after cancellation.
+* Previous payments remain subject to this policy.
+
+## 2. Refund Eligibility
+
+Refund requests may be considered under the following circumstances:
+
+* Duplicate payments.
+* Accidental multiple charges.
+* Technical issues that prevent access to purchased services.
+* Billing errors caused by our platform.
+
+## 3. Non-Refundable Situations
+
+Refunds are generally not provided for:
+
+* Change of mind.
+* Partial use of subscription services.
+* Failure to cancel before renewal.
+* User misunderstanding of features clearly described before purchase.
+* Violations of our Terms and Conditions.
+
+## 4. Refund Request Process
+
+To request a refund, contact:
+
+**Email:** [[billing@yourdomain.com](mailto:billing@yourdomain.com)]
+
+Please include:
+
+* Registered email address
+* Transaction ID
+* Payment date
+* Reason for refund request
+
+## 5. Processing Time
+
+Approved refunds are typically processed within 7–14 business days depending on the payment provider and financial institution.
+
+## 6. Policy Updates
+
+We reserve the right to modify this policy at any time. Updates will be posted on this page.
+
+---
+
+# Cookie Policy
+
+**Last Updated:** June 12, 2026
+
+This Cookie Policy explains how **[Website Name]** uses cookies and similar technologies.
+
+## What Are Cookies?
+
+Cookies are small text files stored on your device that help websites function properly and improve user experience.
+
+## How We Use Cookies
+
+### Essential Cookies
+
+Required for:
+
+* User authentication
+* Secure login sessions
+* Account management
+* Website functionality
+
+### Performance Cookies
+
+Used to:
+
+* Analyze website traffic
+* Measure feature usage
+* Improve performance
+
+### Preference Cookies
+
+Used to:
+
+* Remember user settings
+* Save preferences
+* Improve usability
+
+### Security Cookies
+
+Used to:
+
+* Detect suspicious activity
+* Prevent fraud
+* Protect user accounts
+
+## Managing Cookies
+
+Users can manage or disable cookies through browser settings. Disabling certain cookies may affect website functionality.
+
+## Third-Party Cookies
+
+Third-party services such as analytics or payment providers may use cookies according to their own policies.
+
+## Contact
+
+For questions regarding cookies:
+
+**Email:** [[privacy@yourdomain.com](mailto:privacy@yourdomain.com)]
+
+---
+
+# DMCA & Copyright Policy
+
+**Last Updated:** June 12, 2026
+
+**[Website Name]** respects intellectual property rights and expects users to do the same.
+
+## Copyright Ownership
+
+All content published on this platform, including:
+
+* Text
+* Graphics
+* Logos
+* Databases
+* Images
+* Guides
+* Software
+
+is protected by applicable copyright and intellectual property laws.
+
+## Reporting Copyright Infringement
+
+If you believe your copyrighted work has been used improperly, please send a notice containing:
+
+* Your name and contact information
+* Description of the copyrighted work
+* URL or location of the allegedly infringing material
+* Statement of good-faith belief
+* Statement that the information provided is accurate
+* Electronic or physical signature
+
+Submit notices to:
+
+**Email:** [[copyright@yourdomain.com](mailto:copyright@yourdomain.com)]
+
+## Counter Notification
+
+Users who believe content was removed in error may submit a counter-notification containing:
+
+* Identification of removed content
+* Explanation of why removal was incorrect
+* Contact information
+* Statement made under penalty of perjury
+* Signature
+
+## Repeat Infringers
+
+We reserve the right to suspend or terminate accounts that repeatedly infringe intellectual property rights.
+
+## False Claims
+
+Knowingly submitting false copyright claims may result in account restrictions and potential legal consequences.
+
+---
+
+# Community Guidelines
+
+**Last Updated:** June 12, 2026
+
+These Community Guidelines help maintain a professional, respectful, and useful environment for all users.
+
+## Be Respectful
+
+Users must:
+
+* Treat others professionally.
+* Communicate respectfully.
+* Avoid harassment or abusive behavior.
+* Respect differing opinions.
+
+## Share Helpful Content
+
+When contributing content:
+
+* Provide accurate information.
+* Share genuine repair knowledge.
+* Use clear and understandable language.
+* Stay relevant to mobile repair and spare parts topics.
+
+## Prohibited Content
+
+Users may not post:
+
+* Spam or promotional abuse
+* Misleading information
+* Fraudulent content
+* Malware or malicious links
+* Illegal content
+* Copyright-infringing material
+* Hate speech or discrimination
+* Harassment or threats
+* Adult or explicit content
+
+## Technical Content Standards
+
+Repair-related contributions should:
+
+* Be based on actual knowledge or experience.
+* Avoid intentionally dangerous instructions.
+* Clearly identify assumptions or limitations.
+* Respect safety practices.
+
+## Account Abuse
+
+The following activities are prohibited:
+
+* Creating fake accounts
+* Attempting unauthorized access
+* Circumventing security measures
+* Automated scraping or abuse
+* Impersonation of individuals or organizations
+
+## Content Moderation
+
+We may:
+
+* Review user-generated content
+* Remove content that violates policies
+* Restrict account privileges
+* Suspend or terminate accounts
+
+without prior notice when necessary.
+
+## Reporting Violations
+
+To report violations:
+
+**Email:** [[support@yourdomain.com](mailto:support@yourdomain.com)]
+
+Include relevant details and supporting information where possible.
+
+## Enforcement
+
+Failure to comply with these guidelines may result in:
+
+* Content removal
+* Temporary suspension
+* Permanent account termination
+* Legal action where applicable
+
+## Contact
+
+For questions regarding community standards:
+
+**Email:** [[support@yourdomain.com](mailto:support@yourdomain.com)]
